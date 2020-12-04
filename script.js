@@ -6,8 +6,12 @@ $('#second').on('click', () =>{
     $('#first').text('No, not the other one, me!')
 })
 
-$('.third').on('click', () => {
-    $('#first').css('background-color','pink')
-    $('#second').css('background-color','pink')
-    $('.third').css('background-color','grey')
+
+
+$('#third').on('click', () => {
+    let colorValue = document.getElementById('color').value
+    $('#first').css('background-color',colorValue)
+    $('#second').css('background-color',colorValue)
+    $('#third').css('background-color',colorValue)
+    document.getElementById('third').disabled = true;
 })
